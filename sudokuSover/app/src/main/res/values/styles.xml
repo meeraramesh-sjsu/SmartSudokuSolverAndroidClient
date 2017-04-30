@@ -1,0 +1,22 @@
+
+    <resources xmlns:android="http://schemas.android.com/apk/res/android">
+        <style name="Theme.AppBaseTheme" parent="@android:style/Theme.Light">
+            <item name="android:editTextColor">#295055</item>
+            <item name="android:textColorPrimary">#295055</item>
+            <item name="android:textColorSecondary">#295055</item>
+            <item name="android:textColorTertiary">#295055</item>
+            <item name="android:textColorPrimaryInverse">#295055</item>
+            <item name="android:textColorSecondaryInverse">#295055</item>
+            <item name="android:textColorTertiaryInverse">#295055</item>
+
+            <item name="android:windowBackground">@color/white</item>
+        </style>
+
+    <style name="AppTheme">
+        <item name ="android:windowBackground">@color/white</item>
+    <item name="colorPrimary">#3F51B5</item>
+    <item name="colorPrimaryDark">#303F9F</item>
+    <item name="colorAccent">#FF4081</item>
+
+    </style>
+        </resources>

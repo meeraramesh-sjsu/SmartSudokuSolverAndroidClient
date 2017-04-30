@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sudoku.edu.sjsu.sudokusover.LoginUser">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Email Id"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:hint="emailId"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emailId"
+                    android:imeOptions="flagNoExtractUi"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Token"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:hint="Token"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/token"
+                    android:imeOptions="flagNoExtractUi"/>
+
+                <!--<Spinner-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="3"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/email"-->
+                <!--android:entries="@array/colorEntries"/>-->
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="Play"
+                    android:onClick="validateAndPlay"
+                    android:id="@+id/play"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:hint="validate"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/validationResult"
+                    android:imeOptions="flagNoExtractUi"/>
+                </TableRow>
+        </TableLayout>
+
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
