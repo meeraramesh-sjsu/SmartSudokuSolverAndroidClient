@@ -22,4 +22,14 @@ public class StartActivity extends Activity {
         Intent intent = new Intent(getApplicationContext(), LoginUser.class);
         startActivity(intent);
     }
+
+    public void bootStrap(View v) {
+        Intent intent = new Intent(getApplicationContext(), BootStrap.class);
+        startActivity(intent);
+    }
+
+    public void clientRegister(View v) {
+        Intent intent = new Intent(getApplicationContext(), ClientRegistration.class);
+        startActivity(intent);
+    }
 }

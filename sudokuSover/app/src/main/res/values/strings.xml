@@ -10,4 +10,6 @@
     <string name="new_user">Registered and tokens received</string>
     <string name="tap_on_mic">Tap on mic to speak</string>
     <string name="click">Register</string>
+    <string name="title_activity_client_registration">ClientRegistration</string>
+    <string name="title_activity_boot_strap">BootStrap</string>
 </resources>

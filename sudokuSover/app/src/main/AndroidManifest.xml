@@ -29,7 +29,12 @@
         <activity
             android:name=".LoginUser"
             android:parentActivityName=".NewUser" />
-
+        <activity
+            android:name=".ClientRegistration"
+            android:label="@string/title_activity_client_registration" />
+        <activity
+            android:name=".BootStrap"
+            android:label="@string/title_activity_boot_strap"></activity>
     </application>
 
 </manifest>

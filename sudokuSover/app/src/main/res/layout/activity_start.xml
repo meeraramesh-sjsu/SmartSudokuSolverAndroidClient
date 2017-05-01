@@ -10,13 +10,29 @@
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="BootStrap"
+            android:onClick="bootStrap"
+            android:id="@+id/bootStrap"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Client Registration"
+            android:onClick="clientRegister"
+            android:id="@+id/clientRegister"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Sign Up"
             android:onClick="signUp"
             android:id="@+id/signUp"/>
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Login"
             android:onClick="login"
