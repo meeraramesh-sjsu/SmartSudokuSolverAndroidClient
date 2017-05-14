@@ -113,6 +113,22 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/regUpdate"/>
           </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Type"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/type"/>
+            </TableRow>
 
             <TableRow
                 android:layout_width="fill_parent"
@@ -138,6 +154,16 @@
                     android:text="Delete"
                     android:onClick="onDelete"
                     android:id="@+id/delete"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onHome"
+                android:src="@drawable/home"
+                android:id="@+id/bootStrap_Gohome"/>
             </TableRow>
         </TableLayout>
 

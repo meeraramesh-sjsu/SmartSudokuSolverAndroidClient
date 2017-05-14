@@ -34,7 +34,8 @@
             android:label="@string/title_activity_client_registration" />
         <activity
             android:name=".BootStrap"
-            android:label="@string/title_activity_boot_strap"></activity>
+            android:label="@string/title_activity_boot_strap" />
+        <activity android:name=".sudokuResult"></activity>
     </application>
 
 </manifest>

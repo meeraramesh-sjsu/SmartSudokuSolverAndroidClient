@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="schemas.android.com/tools"
+    tools:context="com.example.sample.BootStrap"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/bootStrap_home"
+        android:orderInCategory="100"
+        android:title="HOME"
+        yourapp:showAsAction="always" />
+
+</menu>

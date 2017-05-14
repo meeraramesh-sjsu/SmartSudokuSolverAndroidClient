@@ -9,96 +9,757 @@
         android:layout_height="wrap_content"
         android:id="@+id/root"
         android:stretchColumns="*">
-    <TableRow >
-    <EditText
-        android:id="@+id/input1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_weight="1"
-        android:text="input1" />
+    <TableRow
+        android:stretchColumns="9">
+
+        <EditText
+            android:id="@+id/input11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:singleLine="false"
+            android:text="@string/sudokuDefault" />
+
+        <EditText
+            android:id="@+id/input12"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/sudokuDefault" />
 
     <EditText
-        android:id="@+id/input2"
+        android:id="@+id/input13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:layout_weight="1"
-        android:text="input2" />
+        android:text="@string/sudokuDefault" />
 
-    <EditText
-        android:id="@+id/input3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:layout_weight="1"
-        android:text="input3" />
+        <EditText
+            android:id="@+id/input14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_weight="1"
+            android:text="@string/sudokuDefault" />
+
+        <EditText
+            android:id="@+id/input15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_weight="1"
+            android:text="@string/sudokuDefault" />
+
+        <EditText
+            android:id="@+id/input16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_weight="1"
+            android:text="@string/sudokuDefault" />
+
+        <EditText
+            android:id="@+id/input17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_weight="1"
+            android:text="@string/sudokuDefault" />
+
+        <EditText
+            android:id="@+id/input18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/sudokuDefault" />
+
+        <EditText
+            android:id="@+id/input19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:layout_weight="1"
+            android:text="@string/sudokuDefault" />
 
 </TableRow>
 <TableRow>
 
 
-        <EditText
-            android:id="@+id/input4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_weight="1"
-            android:text="input4" />
+    <EditText
+        android:id="@+id/input21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:text="@string/sudokuDefault" />
 
-        <EditText
-            android:id="@+id/input5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_weight="1"
-            android:text="input5" />
+    <EditText
+        android:id="@+id/input22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:text="@string/sudokuDefault" />
 
-        <EditText
-            android:id="@+id/input6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_weight="1"
-            android:text="input6" />
+    <EditText
+        android:id="@+id/input23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:text="@string/sudokuDefault" />
+
+    <EditText
+        android:id="@+id/input24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:text="@string/sudokuDefault" />
+
+    <EditText
+        android:id="@+id/input25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:text="@string/sudokuDefault" />
+
+    <EditText
+        android:id="@+id/input26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:text="@string/sudokuDefault" />
+
+    <EditText
+        android:id="@+id/input27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:text="@string/sudokuDefault" />
+
+    <EditText
+        android:id="@+id/input28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:text="@string/sudokuDefault" />
+
+    <EditText
+        android:id="@+id/input29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_weight="1"
+        android:text="@string/sudokuDefault" />
 
 </TableRow>
 
         <TableRow>
+
             <EditText
-                android:id="@+id/input7"
+                android:id="@+id/input31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input34"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:imeOptions="actionNext"
                 android:layout_weight="1"
-                android:text="input7" />
+                android:text="@string/sudokuDefault" />
 
             <EditText
-                android:id="@+id/input8"
+                android:id="@+id/input35"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:layout_weight="1"
-                android:text="input8" />
+                android:text="@string/sudokuDefault" />
 
             <EditText
-                android:id="@+id/input9"
+                android:id="@+id/input36"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:layout_weight="1"
-                android:text="input9" />
+                android:text="@string/sudokuDefault" />
 
+            <EditText
+                android:id="@+id/input37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+        </TableRow>
+        <TableRow>
+
+            <EditText
+                android:id="@+id/input41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+        </TableRow>
+        <TableRow>
+
+            <EditText
+                android:id="@+id/input51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input57"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input59"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+        </TableRow>
+        <TableRow>
+
+            <EditText
+                android:id="@+id/input61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input67"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input68"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+        </TableRow>
+        <TableRow>
+
+            <EditText
+                android:id="@+id/input71"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input73"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input74"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input76"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input77"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input78"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input79"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+        </TableRow>
+        <TableRow>
+
+            <EditText
+                android:id="@+id/input81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input82"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input84"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input85"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input86"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input87"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input88"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input89"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+        </TableRow>
+        <TableRow>
+
+            <EditText
+                android:id="@+id/input91"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input93"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input94"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input95"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input96"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input97"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input98"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
+
+            <EditText
+                android:id="@+id/input99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_weight="1"
+                android:text="@string/sudokuDefault" />
         </TableRow>
     </TableLayout>
 
@@ -106,31 +767,21 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp"
         android:gravity="center"
         android:orientation="vertical"
-        android:id="@+id/linearLayout">
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
 
-        <ImageButton
+        <Button
             android:id="@+id/btnSpeak"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@null"
-            android:src="@drawable/ico_mic" />
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Mic" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/tap_on_mic"
-            android:textColor="@color/white"
-            android:textSize="15dp"
-            android:textStyle="normal" />
     </LinearLayout>
-
-
 
 
 </RelativeLayout>
