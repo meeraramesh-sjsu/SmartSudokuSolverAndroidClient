@@ -139,6 +139,7 @@ public class ClientRegistration extends Activity {
                     .append("Device Type", "Mobile").append("Reboot", "").append("Factory Reset", "")
                     .append("Error Code", "0");
             collection1.insert(document);
+
         }
         makeToast(result);
     }

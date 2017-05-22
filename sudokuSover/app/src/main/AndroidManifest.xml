@@ -24,9 +24,6 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".NewUser" />
         <activity
-            android:name=".Tokens"
-            android:parentActivityName=".NewUser" />
-        <activity
             android:name=".LoginUser"
             android:parentActivityName=".NewUser" />
         <activity
@@ -35,7 +32,6 @@
         <activity
             android:name=".BootStrap"
             android:label="@string/title_activity_boot_strap" />
-        <activity android:name=".sudokuResult"></activity>
     </application>
 
 </manifest>

@@ -9,9 +9,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="368dp"
     android:layout_height="wrap_content"
-    tools:layout_editor_absoluteY="0dp"
-    tools:layout_editor_absoluteX="8dp">
-
+    >
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:background="#FFF000"
+        android:textColor="@color/server_output"
+        android:textSize="20sp" />
     <TableLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
@@ -128,14 +133,34 @@
                 android:imeOptions="flagNoExtractUi"/>
         </TableRow>
 
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Register"
+                android:onClick="registerNewUser"
+                android:id="@+id/newUserRegister"/>
+        </TableRow>
     </TableLayout>
+
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onHome"
+        android:text="HOME"
         android:layout_gravity="right"
-        android:text="Register"
-        android:onClick="registerNewUser"
-        android:id="@+id/newUserRegister"/>
+        android:src="@drawable/home"
+        android:id="@+id/bootStrap_Gohome"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:background="#FFF000"
+        android:textColor="@color/server_output"
+        android:textSize="20sp" />
 </LinearLayout>
     </android.support.constraint.ConstraintLayout>

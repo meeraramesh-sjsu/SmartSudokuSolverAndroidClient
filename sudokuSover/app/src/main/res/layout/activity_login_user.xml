@@ -7,9 +7,17 @@
     tools:context="sudoku.edu.sjsu.sudokusover.LoginUser">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:orientation="vertical" android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:background="#FFF000"
+            android:textColor="@color/server_output"
+            android:textSize="20sp" />
         <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
@@ -34,7 +42,7 @@
                     android:imeOptions="flagNoExtractUi"/>
             </TableRow>
 
-            <TableRow
+           <!-- <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
 
@@ -53,13 +61,13 @@
                     android:id="@+id/token"
                     android:imeOptions="flagNoExtractUi"/>
 
-                <!--<Spinner-->
+                <!-<Spinner-->
                 <!--android:layout_width="0dp"-->
                 <!--android:layout_weight="3"-->
                 <!--android:layout_height="wrap_content"-->
                 <!--android:id="@+id/email"-->
                 <!--android:entries="@array/colorEntries"/>-->
-            </TableRow>
+           <!-- </TableRow> -->
 
             <TableRow
                 android:layout_width="fill_parent"
@@ -68,9 +76,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:text="Play"
-                    android:onClick="validateAndPlay"
-                    android:id="@+id/play"/>
+                    android:text="Get Tokens"
+                    android:onClick="getTokens"
+                    android:id="@+id/tokens"/>
             </TableRow>
 
             <TableRow
@@ -84,9 +92,35 @@
                     android:id="@+id/validationResult"
                     android:imeOptions="flagNoExtractUi"/>
                 </TableRow>
+
+            <TableRow>
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ListView>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onHome"
+                    android:src="@drawable/home"
+                    android:text="HOME"
+                    android:id="@+id/bootStrap_Gohome"/>
+            </TableRow>
         </TableLayout>
 
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:background="#FFF000"
+            android:textColor="@color/server_output"
+            android:textSize="20sp" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

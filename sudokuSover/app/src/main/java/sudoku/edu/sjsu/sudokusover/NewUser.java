@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -62,15 +63,20 @@ public class NewUser extends Activity {
                     headers.setContentType(MediaType.APPLICATION_JSON);
                     HttpEntity<String> entity = new HttpEntity<String>(request.toString(), headers);
 
-                        String tokens =  restTemplate.postForObject(newUserRestUrl,entity,String.class);
+                    String tokens =  restTemplate.postForObject(newUserRestUrl,entity,String.class);
+                    if(tokens.trim().equals("Please register first")) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    Toast.makeText(getApplicationContext(),"Please register first",Toast.LENGTH_LONG).show();
+                                }
+                            });
+                    }
+                    else {
+                        Intent intent = new Intent(getApplicationContext(), LoginUser.class);
 
-                    //Toast.makeText(getApplicationContext(),
-                      //      getString(R.string.new_user),
-                       //     Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), Tokens.class);
-
-                    intent.putExtra(EXTRA_MESSAGE, tokens);
-                    startActivity(intent);
+                        startActivity(intent);
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -78,5 +84,9 @@ public class NewUser extends Activity {
         });
 
         thread.start();
+    }
+
+    public void onHome(View v) {
+        startActivity(new Intent(this, StartActivity.class));
     }
 }

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -18,34 +19,69 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends Activity {
+import static java.lang.Thread.sleep;
+
+public class MainActivity extends Activity implements
+        TextToSpeech.OnInitListener {
 
 
     //private TextView txtSpeechInput;
 
     private final int REQ_CODE_SPEECH_INPUT = 100;
     private int numberOfLines = 0;
-    private List<String> validWords = Arrays.asList("one", "two", "three", "four", "five", "six", "seven", "eight", "nine","1", "2", "3", "4", "5", "6", "7", "8", "9");
+    private List<String> validWords = Arrays.asList("one", "two", "three", "four",
+            "five", "six", "seven", "eight", "nine","1", "2", "3", "4", "5", "6", "7", "8", "9");
     private TextToSpeech ttobj;
-
+    private Button button;
+    private char[][] input = new char[9][9];
+    private boolean stop = false;
+    Thread tSpeak;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextToSpeech tts = new TextToSpeech(this, (TextToSpeech.OnInitListener) this);
-        tts.setLanguage(Locale.US);
-        tts.speak("Text to say aloud", TextToSpeech.QUEUE_ADD, null);
-
         findViews();
         //txtSpeechInput = (TextView) findViewById(R.id.txtSpeechInput);
         btnSpeak = (Button) findViewById(R.id.btnSpeak);
-        ttobj = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+        ttobj = new TextToSpeech(this,this);
+        button = (Button) findViewById(R.id.listenBoard);
+
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onInit(int status) {
-                if (status != TextToSpeech.ERROR) {
-                    ttobj.setLanguage(Locale.US);
-                }
+            public void onClick(View v) {
+
+                tSpeak = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        for(int i=0;i<9;i++) {
+                            for (int j = 0; j < 9; j++) {
+                                final char input1 = input[i][j];
+                                runOnUiThread(new Runnable() {
+
+                                    @Override
+                                    public void run() {
+                                        ttobj.speak(Character.toString(input1), TextToSpeech.QUEUE_FLUSH, null);
+                                    }
+                                });
+                                try {
+                                    sleep(1000);
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+
+                                if(Thread.interrupted()) {
+                                    ttobj.shutdown();
+                                    ttobj.stop();
+                                    return;
+                                }
+                            }
+                        }
+                    }
+
+                });
+                tSpeak.start();
+                return;
             }
         });
 
@@ -55,6 +91,20 @@ public class MainActivity extends Activity {
                 promptSpeechInput();
             }
         });
+    }
+
+    public void stop(View v) {
+        tSpeak.interrupt();
+    }
+
+    @Override
+    public void onDestroy() {
+        // Don't forget to shutdown!
+        if (ttobj != null) {
+            ttobj.stop();
+            ttobj.shutdown();
+        }
+        super.onDestroy();
     }
 
     /**
@@ -90,6 +140,43 @@ public class MainActivity extends Activity {
                     getString(R.string.speech_not_supported),
                     Toast.LENGTH_SHORT).show();
         }
+    }
+    @Override
+    public void onInit(int status) {
+        // TODO Auto-generated method stub
+
+        if (status == TextToSpeech.SUCCESS) {
+
+            int result = ttobj.setLanguage(Locale.US);
+
+            // tts.setPitch(5); // set pitch level
+
+            // tts.setSpeechRate(2); // set speech speed rate
+
+            if (result == TextToSpeech.LANG_MISSING_DATA
+                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS", "Language is not supported");
+            } else {
+                btnSpeak.setEnabled(true);
+                speakOut();
+            }
+
+        } else {
+            Log.e("TTS", "Initilization Failed");
+        }
+
+    }
+
+    private void speakOut() {
+
+        String text = "Welcome";
+
+        ttobj.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+    private void speakOutEditText(EditText txt) {
+        String speak = txt.getText().toString();
+        ttobj.speak(speak, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     public void setText(String input, EditText inputEdit) {
@@ -186,7 +273,7 @@ public class MainActivity extends Activity {
     }
 
     private void fillSudokuBoardAndApplyAlgorithm() {
-        char[][] input = new char[9][9];
+
         for (int i = 0; i < 9; i++)
             for (int j = 0; j < 9; j++)
                 input[i][j] = '.';
@@ -200,9 +287,6 @@ public class MainActivity extends Activity {
         SudokuSolver ss = new SudokuSolver();
         ss.solveSudoku(input);
 
-        String toSpeak = "Sudoku algorithm is applied on the input board";
-        ttobj.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
-        ttobj.speak(Character.toString(input[0][1]), TextToSpeech.QUEUE_ADD, null);
         input11.setText(Character.toString(input[0][0]));
         input12.setText(Character.toString(input[0][1]));
         input13.setText(Character.toString(input[0][2]));
@@ -291,14 +375,6 @@ public class MainActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         //getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
-
-    public void onPause() {
-        if (ttobj != null) {
-            ttobj.stop();
-            ttobj.shutdown();
-        }
-        super.onPause();
     }
 
     private EditText input11;
@@ -473,5 +549,9 @@ public class MainActivity extends Activity {
         input98 = (EditText) findViewById(R.id.input98);
         input99 = (EditText) findViewById(R.id.input99);
 
+    }
+
+    public void onHome(View v) {
+        startActivity(new Intent(this, StartActivity.class));
     }
 }

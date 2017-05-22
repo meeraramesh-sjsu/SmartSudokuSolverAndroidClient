@@ -6,9 +6,17 @@
     android:layout_height="match_parent"
     tools:context="sudoku.edu.sjsu.sudokusover.ClientRegistration">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:orientation="vertical" android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:background="#FFF000"
+            android:textColor="@color/server_output"
+            android:textSize="20sp" />
         <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
@@ -158,15 +166,23 @@
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
-            <ImageButton
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="onHome"
                 android:src="@drawable/home"
+                android:text="Home"
+                android:layout_gravity="right"
                 android:id="@+id/bootStrap_Gohome"/>
             </TableRow>
         </TableLayout>
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:background="#FFF000"
+            android:textColor="@color/server_output"
+            android:textSize="20sp" />
          </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/root"
         android:stretchColumns="*">
+
     <TableRow
         android:stretchColumns="9">
 
@@ -761,27 +762,46 @@
                 android:layout_weight="1"
                 android:text="@string/sudokuDefault" />
         </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/btnSpeak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="Mic" />
+
+            <Button
+                android:id="@+id/listenBoard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:text="ListenSudoku" />
+
+            <Button
+                android:id="@+id/stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="stop"
+                android:layout_weight="1"
+                android:text="StopSudoku" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onHome"
+                android:text="HOME"
+                android:layout_gravity="right"
+                android:src="@drawable/home"
+                android:id="@+id/bootStrap_Gohome"/>
+        </TableRow>
     </TableLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:id="@+id/linearLayout"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
-        <Button
-            android:id="@+id/btnSpeak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:text="Mic" />
-
-    </LinearLayout>
 
 
 </RelativeLayout>
